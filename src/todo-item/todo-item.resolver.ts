@@ -15,5 +15,7 @@ export class TodoItemResolver extends CRUDResolver(TodoItemDTO, {
     super(todoItemService);
   }
 
-  // Other queries defined here using @Query
+  // We define other @Query endpoints here, but we do not overwrite the
+  // queryMany function as we just want it to call the `query` function
+  // on the service
 }
